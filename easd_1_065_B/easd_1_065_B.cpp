@@ -10,3 +10,12 @@ using namespace std;
 
 const int max = 65 + 20 - 2 * 15 + 10 + 20; // jumlah maksimum data
 
+int bimo[65];
+int temp[65];
+
+void merge(int low, int mid, int high) {
+    int i = low;
+    int AR = mid + 1;
+    int k = low;
+
+   
