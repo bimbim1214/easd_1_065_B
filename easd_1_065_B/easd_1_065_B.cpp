@@ -30,4 +30,10 @@ void merge(int low, int mid, int high) {
         k++;
     }
 
+    while (AR <= high) {
+        temp[k] = bimo[AR];
+        AR++;
+        k++;
+    }
+
     
