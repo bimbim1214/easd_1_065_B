@@ -59,3 +59,10 @@ void mergeSort(int low, int high) {
 }
 
 void input()
+{
+    cout << "Masukkan " << 65 << " data:" << endl;
+    for (int i = 0; i < 65; i++) {
+        cin >> bimo[i];
+    }
+}
+
