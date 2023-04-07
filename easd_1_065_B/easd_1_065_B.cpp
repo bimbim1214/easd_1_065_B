@@ -58,3 +58,4 @@ void mergeSort(int low, int high) {
     merge(low, mid, high);
 }
 
+void input()
