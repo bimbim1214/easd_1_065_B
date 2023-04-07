@@ -18,4 +18,9 @@ void merge(int low, int mid, int high) {
     int AR = mid + 1;
     int k = low;
 
-   
+    while (i <= mid && AR <= high) {
+        if (bimo[i] <= bimo[AR]) {
+            temp[k] = bimo[i];
+            i++;
+        }
+        
