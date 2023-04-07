@@ -15,24 +15,24 @@ int temp[85];
 
 void merge(int low, int mid, int high) {
     int i = low;
-    int AR = mid + 1;
+    int BP = mid + 1;
     int k = low;
 
-    while (i <= mid && AR <= high) {
-        if (bimo[i] <= bimo[AR]) {
+    while (i <= mid && BP <= high) {
+        if (bimo[i] <= bimo[BP]) {
             temp[k] = bimo[i];
             i++;
         }
         else {
-            temp[k] = bimo[AR];
-            AR++;
+            temp[k] = bimo[BP];
+            BP++;
         }
         k++;
     }
 
-    while (AR <= high) {
-        temp[k] = bimo[AR];
-        AR++;
+    while (BP <= high) {
+        temp[k] = bimo[BP];
+        BP++;
         k++;
     }
 
@@ -60,15 +60,24 @@ void mergeSort(int low, int high) {
 
 void input()
 {
-    cout << "Masukkan " << 85 << " data:" << endl;
-    for (int i = 0; i < 85; i++) {
+    cout << "\n----------------------" << endl;
+    cout << "\nMasukkan array element" << endl;
+    cout << "\n----------------------" << endl;
+
+    for (int i = 0; i < 85; i++) 
+    {
         cin >> bimo[i];
     }
 }
 
-void display() {
+void display() 
+{
+    cout << "------------------" << endl;
     cout << "Hasil Pengurutan: " << endl;
-    for (int i = 0; i < 85; i++) {
+    cout << "------------------" << endl;
+
+    for (int i = 0; i < 85; i++) 
+    {
         cout << bimo[i] << " ";
     }
     cout << endl;
@@ -79,5 +88,5 @@ int main()
     input();
     mergeSort(0, 85 - 1);
     display();
-    return 0;
+    return 0;
 }
