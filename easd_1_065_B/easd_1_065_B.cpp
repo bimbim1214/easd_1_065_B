@@ -10,7 +10,7 @@ using namespace std;
 
 const int max = 65 + 20 - 2 * 15 + 10 + 20; // jumlah maksimum data
 
-int bimo[65];
+int bimo[85];
 int temp[85];
 
 void merge(int low, int mid, int high) {
@@ -60,9 +60,17 @@ void mergeSort(int low, int high) {
 
 void input()
 {
-    cout << "Masukkan " << 65 << " data:" << endl;
-    for (int i = 0; i < 65; i++) {
+    cout << "Masukkan " << 85 << " data:" << endl;
+    for (int i = 0; i < 85; i++) {
         cin >> bimo[i];
     }
+}
+
+void display() {
+    cout << "Hasil Pengurutan: " << endl;
+    for (int i = 0; i < 85; i++) {
+        cout << bimo[i] << " ";
+    }
+    cout << endl;
 }
 
