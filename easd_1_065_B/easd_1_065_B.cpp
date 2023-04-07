@@ -11,7 +11,7 @@ using namespace std;
 const int max = 65 + 20 - 2 * 15 + 10 + 20; // jumlah maksimum data
 
 int bimo[65];
-int temp[65];
+int temp[85];
 
 void merge(int low, int mid, int high) {
     int i = low;
@@ -42,4 +42,19 @@ void merge(int low, int mid, int high) {
         k++;
     }
 
-  
+    for (int i = low; i <= high; i++) {
+        bimo[i] = temp[i];
+    }
+}
+
+void mergeSort(int low, int high) {
+    if (low >= high) {
+        return;
+    }
+
+    int mid = (low + high) / 2;
+    mergeSort(low, mid);
+    mergeSort(mid + 1, high);
+    merge(low, mid, high);
+}
+
