@@ -23,4 +23,11 @@ void merge(int low, int mid, int high) {
             temp[k] = bimo[i];
             i++;
         }
-        
+        else {
+            temp[k] = bimo[AR];
+            AR++;
+        }
+        k++;
+    }
+
+    
